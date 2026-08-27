@@ -22,9 +22,9 @@ class _UserListViewState extends State<UserListView> {
 
   Future<void> loadUsers() async {
     try {
-      final fetchedUsers = await userService.findAll();
+      final listUsers = await userService.findAll();
       setState(() {
-        users = fetchedUsers;
+        users = listUsers;
       });
     } catch (e) {
       print('Erro ao buscar usuários: $e');

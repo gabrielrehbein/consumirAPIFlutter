@@ -26,9 +26,9 @@ class _UserDetailViewState extends State<UserDetailView> {
   }
 
   Future<void> loadUser() async {
-    final fetchedUser = await userService.findById(widget.userId);
+    final datailUser = await userService.findById(widget.userId);
     setState(() {
-      user = fetchedUser;
+      user = datailUser;
     });
   }
 
